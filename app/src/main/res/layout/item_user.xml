@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/user_alias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="User alias" />
+
+    <TextView
+        android:id="@+id/user_gold_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:drawableStart="@drawable/gold_medal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_alias"
+        tools:text="150" />
+
+    <TextView
+        android:id="@+id/user_silver_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:drawableStart="@drawable/silver_medal"
+        app:layout_constraintEnd_toStartOf="@id/user_bronze_number"
+        app:layout_constraintStart_toEndOf="@id/user_gold_number"
+        app:layout_constraintTop_toBottomOf="@id/user_alias"
+        tools:text="250" />
+
+    <TextView
+        android:id="@+id/user_bronze_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:drawableStart="@drawable/bronze_medal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_alias"
+        tools:text="350" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
